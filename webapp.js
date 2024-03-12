@@ -142,7 +142,7 @@ let plusButton = document.createElement("button");
 plusButton.innerText = "+";
 plusButton.style.backgroundColor = '#2cab37';
 plusButton.style.color = '#FFFFFF';
-plusButton.style.padding = '15px';
+plusButton.style.padding = '10px';
 plusButton.style.border = 'none';
 plusButton.style.cursor = 'pointer';
 
@@ -150,7 +150,7 @@ let minusButton = document.createElement("button");
 minusButton.innerText = "-";
 minusButton.style.backgroundColor = '#2cab37';
 minusButton.style.color = '#FFFFFF';
-minusButton.style.padding = '15px';
+minusButton.style.padding = '10px';
 minusButton.style.border = 'none';
 minusButton.style.cursor = 'pointer';
 
