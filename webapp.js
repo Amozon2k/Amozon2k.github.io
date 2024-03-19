@@ -90,7 +90,7 @@ cartButton.addEventListener("click", function(){
         let price = itemPrices[item];
         let listItem = document.createElement("li");
         listItem.innerText = `Товар ${item}: ${quantity} шт. - ${price * quantity} руб.`;
-        listItem.style.color ='black';
+        listItem.style.color ='#030303';
         cartItemsList.appendChild(listItem);
         data.items.push(listItem.innerText);
     }
