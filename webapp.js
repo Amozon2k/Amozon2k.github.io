@@ -90,6 +90,7 @@ cartButton.addEventListener("click", function(){
         let price = itemPrices[item];
         let listItem = document.createElement("li");
         listItem.innerText = `Товар ${item}: ${quantity} шт. - ${price * quantity} руб.`;
+        listItem.style.color ='black';
         cartItemsList.appendChild(listItem);
         data.items.push(listItem.innerText);
     }
@@ -103,6 +104,7 @@ cartButton.addEventListener("click", function(){
     orderDeliveryButton.style.cursor = 'pointer';
     orderDeliveryButton.style.marginTop = '20px';
     orderDeliveryButton.addEventListener("click", async function(){
+        
         let email = prompt("введите вашу почту");
         let response = await fetch("https://miniapp-6a3fb-default-rtdb.firebaseio.com/orders.json?auth="+"Tske75sriSvcDOcJBvfESUvoOjjE3XMqy49EtyTQ",{
             method:"post",
