@@ -11,10 +11,11 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
   const messaging = firebase.messaging();
   
   messaging.onBackgroundMessage(function(payload) {
+    console.log('Пришло сообщение'+payload);
 
     const notificationOptions = {
         body: payload.notification.body
