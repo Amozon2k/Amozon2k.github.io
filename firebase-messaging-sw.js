@@ -10,16 +10,17 @@ const firebaseConfig = {
     measurementId: "G-NQ9QQ07510"
   };
   
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig );
   const messaging = firebase.messaging();
   
   messaging.onBackgroundMessage(function(payload) {
-    console.log('Пришло сообщение'+payload);
-
-    const notificationOptions = {
-        body: payload.notification.body
-    };
-
-    self.registration.showNotification(payload.notification.title, notificationOptions);
-});
+      console.log('Получено уведомление:', payload);
+  
+      const notificationTitle = payload.notification.title;
+      const notificationOptions = {
+          body: payload.notification.body,
+          icon: payload.notification.icon ?? null
+      };
+  
+      self.registration.showNotification(notificationTitle, notificationOptions);
+  });
