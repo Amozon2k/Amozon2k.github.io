@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="converter.css">
   </head>
   <body>
-    <script>
-        if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js', { scope: '/' });
-          navigator.serviceWorker.register('/firebase-messaging-sw.js', { scope: '/' })
-        }
-        </script>
     <form id="converter">
         <label for="input-temp">temperature</label>
         <input type="text" id="input-temp" name="input-temp" value="20" />
@@ -33,6 +27,13 @@
         <output name="output-temp" id="output-temp" for="input-temp input-unit output-unit">68 F</output>
       </form>
       <script src="converter.js"></script>
-      
+      <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' });
+          navigator.serviceWorker.register('/firebase-messaging-sw.js', { scope: '/' });
+          console.log('Регистрация прошла успешно');
+
+        }
+      </script>
   </body>
 </html>
