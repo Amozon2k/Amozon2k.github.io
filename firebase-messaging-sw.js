@@ -13,10 +13,6 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig );
   const messaging = firebase.messaging();
   console.log('test')
-
-    messaging.requestPermission().then(()=>{console.log("Разрешения даны")}).catch((error) => {
-        console.error('Ошибка:', error);
-    });
     messaging.onBackgroundMessage(function(payload) {
       console.log('Получено уведомление:', payload);
   

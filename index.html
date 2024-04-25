@@ -9,6 +9,31 @@
     <link rel="stylesheet" href="converter.css">
   </head>
   <body>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-messaging.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDeVZ40U8FKl8jdIgllDo_fT5DstwCrmuM",
+    authDomain: "pwas-912f5.firebaseapp.com",
+    projectId: "pwas-912f5",
+    storageBucket: "pwas-912f5.appspot.com",
+    messagingSenderId: "718060089543",
+    appId: "1:718060089543:web:25168c10d0ab7e26920ee2",
+    measurementId: "G-NQ9QQ07510"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
+
+    // Запрос разрешения на отправку уведомлений
+    messaging.requestPermission()
+      .then(() => {
+        console.log("Разрешение на отправку уведомлений получено");
+      })
+      .catch((error) => {
+        console.error("Ошибка при запросе разрешения на отправку уведомлений:", error);
+      });
+  </script>
     <form id="converter">
         <label for="input-temp">temperature</label>
         <input type="text" id="input-temp" name="input-temp" value="20" />
