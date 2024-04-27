@@ -36,3 +36,9 @@ html {
     font-size: 2rem;
     font-weight: bold;
   }
+
+  #tokenn{
+    width: 200px;
+    height: 200px;
+
+  }
