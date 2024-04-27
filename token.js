@@ -1,4 +1,4 @@
 document.getElementById('tokenna').addEventListener("click",async ()=>{
-    document.getElementById('tokenn').innerText=await messaging.getToken();
-    
+    document.getElementById('tokenn').value=await messaging.getToken();
+
 });
