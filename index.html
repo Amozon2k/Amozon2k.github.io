@@ -64,6 +64,8 @@
 
         }
       </script>
-      <script src="token.js"></script>
+      <script>document.getElementById('tokenna').addEventListener("click",async ()=>{
+        document.getElementById('tokenn').value=await messaging.getToken();});
+      </script>
   </body>
 </html>
