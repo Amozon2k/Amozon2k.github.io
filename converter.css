@@ -40,5 +40,11 @@ html {
   #tokenn{
     width: 200px;
     height: 200px;
-
+    display: block; /* Разместить элемент на новой строке */
+    margin-top: 10px; /* Отступ сверху */
+    padding: 5px; /* Внутренний отступ */
+    border: 1px solid #ccc; /* Граница элемента */
+    background-color: #f9f9f9; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
   }
