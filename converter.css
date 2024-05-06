@@ -47,6 +47,6 @@ html {
     background-color: #f9f9f9; /* Цвет фона */
     color: #333; /* Цвет текста */
     font-family: Arial, sans-serif; /* Шрифт */
-    overflow-x: auto;
+    overflow: auto;
 
   }
