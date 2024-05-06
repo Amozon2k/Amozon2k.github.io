@@ -38,8 +38,8 @@ html {
   }
 
   #tokenn{
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     display: block; /* Разместить элемент на новой строке */
     margin-top: 10px; /* Отступ сверху */
     padding: 5px; /* Внутренний отступ */
@@ -47,6 +47,6 @@ html {
     background-color: #f9f9f9; /* Цвет фона */
     color: #333; /* Цвет текста */
     font-family: Arial, sans-serif; /* Шрифт */
-    overflow: auto;
+    overflow-y: auto;
 
   }
